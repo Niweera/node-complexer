@@ -1,0 +1,36 @@
+{
+  "name": "@niweera/node-complexer",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A CLI tool to get the complexity metrics when provided the AST and save it in *.JSON format.",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage"
+  },
+  "keywords": [
+    "AST",
+    "Complexity"
+  ],
+  "bin": {
+    "node-complexer": "bin/index.js"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
+  },
+  "author": "Nipuna Weerasekara",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "typhonjs-escomplex": "^0.1.0",
+    "yargs": "^16.2.0"
+  }
+}
