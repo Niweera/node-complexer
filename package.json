@@ -1,6 +1,5 @@
 {
   "name": "@niweera/node-complexer",
-  "private": true,
   "version": "0.0.0",
   "description": "A CLI tool to get the complexity metrics when provided the AST and save it in *.JSON format.",
   "main": "bin/index.js",
@@ -32,5 +31,22 @@
   "dependencies": {
     "typhonjs-escomplex": "^0.1.0",
     "yargs": "^16.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niweera/node-complexer.git"
+  },
+  "np": {
+    "2fa": false
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/bin"
+  ],
+  "bugs": {
+    "url": "https://github.com/Niweera/node-complexer/issues"
+  },
+  "homepage": "https://github.com/Niweera/node-complexer#readme"
 }
