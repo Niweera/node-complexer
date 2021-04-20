@@ -20,29 +20,20 @@ describe("check inputs [input_path, output_path]", () => {
 
   it("should check the input path, and the output path", async () => {
     expect.assertions(1);
-    return expect(checkInputs(input_path_, output_path_)).resolves.toEqual(
-      undefined
-    );
+    return expect(checkInputs(input_path_)).resolves.toEqual(undefined);
   });
 
   it("should check invalid input path", async () => {
     expect.assertions(1);
-    await expect(checkInputs("input_path_", output_path_)).rejects.toEqual(
+    await expect(checkInputs("input_path_")).rejects.toEqual(
       `input_path_ does not exist.`
     );
   });
 
   it("should check a valid input path but not a JSON file", async () => {
     expect.assertions(1);
-    await expect(checkInputs(dummy_js_file, output_path_)).rejects.toEqual(
+    await expect(checkInputs(dummy_js_file)).rejects.toEqual(
       `${dummy_js_file} is not a JSON file.`
-    );
-  });
-
-  it("should check if the output path already exists", async () => {
-    expect.assertions(1);
-    await expect(checkInputs(input_path_, input_path_)).rejects.toEqual(
-      `${input_path_} is already existing.`
     );
   });
 });

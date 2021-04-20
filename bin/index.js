@@ -8,7 +8,7 @@ const { saveComplexer } = require("./saveComplexer/saveComplexer");
 (async () => {
   try {
     const { input_path, output_path } = await getInputs();
-    await checkInputs(input_path, output_path);
+    await checkInputs(input_path);
     const complexity_object = await runComplexer(input_path);
     await saveComplexer(output_path, complexity_object);
   } catch (e) {
